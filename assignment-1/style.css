@@ -25,6 +25,8 @@ button {
 	justify-content: space-between;
 	padding: 6px 24px;
 	border-bottom: 2px solid #c0ccd7;
+	max-width: 100%;
+	height: 60px;
 }
 
 .logo {
@@ -142,6 +144,9 @@ th {
 	transform: scale(0);
 	transition: all 0.25s linear;
 }
+.active-modal {
+	animation: activeModal forwards 0.25s ease-in;
+}
 
 .modal {
 	z-index: 10;
@@ -157,9 +162,13 @@ th {
 	transform: translate(-50%, -50%);
 }
 
-.active-modal {
-	transform: scale(1);
-	transition: all 0.25s linear;
+@keyframes activeModal {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
 }
 
 .delete-book-modal {
@@ -327,7 +336,8 @@ th {
 	}
 
 	.modal {
-		width: 280px;
+		max-width: 280px;
+		height: auto;
 		padding: 16px;
 	}
 
