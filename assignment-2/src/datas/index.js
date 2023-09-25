@@ -199,7 +199,7 @@ export const initialState = {
 	modalAddIsOpen: false,
 	modalDeleteIsOpen: false,
 	bookId: undefined,
-	bookList: JSON.parse(localStorage.getItem('booklist')) || bookList,
+	bookList: getBookList(),
 	searchResults: [],
 	newBookValue: {
 		name: '',
@@ -207,3 +207,12 @@ export const initialState = {
 		topic: 'Programming',
 	},
 };
+function getBookList() {
+	try {
+		const storedBookList = localStorage.getItem('booklist');
+		return storedBookList ? JSON.parse(storedBookList) : bookList;
+	} catch (error) {
+		console.error('Error parsing book list:', error);
+		return [];
+	}
+}
