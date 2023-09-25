@@ -1,0 +1,28 @@
+.modal-delete-head {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.modal-delete-head svg {
+	color: #ff0057;
+	font-size: 60px;
+}
+.modal-delete-head h2 {
+	color: #ff0057;
+}
+.delete-modal-body p {
+	color: #171b1d;
+}
+.delete-modal-body p span {
+	color: #ff0057;
+}
+.delete-modal-footer {
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}
+.delete-name {
+	font-weight: 900;
+}
