@@ -1,15 +1,15 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {IoClose} from 'react-icons/io5';
 import {DataContext} from '../../App';
-import Input from '../Input/Input';
-import './ModalAdd.css';
-import Button from '../Button/Button';
 import {
 	ADD,
 	CLOSE_MODAL_ADD,
 	GET_VALUE_ADD,
 	RESET_VALUE_ADD,
 } from '../../actions';
+import Button from '../Button/Button';
+import Input from '../Input/Input';
+import './ModalAdd.css';
 function ModalAdd() {
 	const {state, dispatch} = useContext(DataContext);
 	const [checkValue, setCheckValue] = useState(false);

@@ -1,19 +1,17 @@
 import {
-	CHANGE_THEME,
-	SEARCH,
-	SHOW_MODAL_ADD,
 	ADD,
+	CHANGE_THEME,
 	CLOSE_MODAL_ADD,
-	SHOW_MODAL_DELETE,
-	DELETE,
 	CLOSE_MODAL_DELETE,
+	DELETE,
 	GET_VALUE_ADD,
-	GET_DATA,
 	RESET_VALUE_ADD,
-	SET_CURRENT_PAGE,
 	SAVE_BOOK_ID,
+	SEARCH,
+	SET_CURRENT_PAGE,
+	SHOW_MODAL_ADD,
+	SHOW_MODAL_DELETE,
 } from '../actions/index.js';
-import {bookList} from '../datas/index.js';
 const reducer = (state, action) => {
 	switch (action.type) {
 		case CHANGE_THEME:
