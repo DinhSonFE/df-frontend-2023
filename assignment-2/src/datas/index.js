@@ -193,7 +193,7 @@ export const bookList = [
 	},
 ];
 export const initialState = {
-	theme: localStorage.getItem('theme') === 'light' ? true : false,
+	theme: getTheme(),
 	searchQuery: '',
 	currentPage: 1,
 	modalAddIsOpen: false,
@@ -215,4 +215,7 @@ function getBookList() {
 		console.error('Error parsing book list:', error);
 		return [];
 	}
+}
+function getTheme ( ) {
+	return localStorage.getItem('theme') === 'light' 
 }

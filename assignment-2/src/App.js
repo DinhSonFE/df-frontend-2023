@@ -17,11 +17,9 @@ function App() {
 
 	return (
 		<DataContext.Provider value={{state, dispatch}}>
-			<div className=''>
 				<NavBar />
 				<Form />
 				<Table />
-			</div>
 		</DataContext.Provider>
 	);
 }
