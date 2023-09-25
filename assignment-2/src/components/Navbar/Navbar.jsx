@@ -1,4 +1,4 @@
-import logo from '../../Assets/Images/avatar2.avif';
+import logo from '../../Assets/Images/avatar.png';
 import ButtonToggleTheme from '../ButtonToggleTheme/ButtonToggleTheme';
 import './Navbar.css';
 function NavBar(props) {

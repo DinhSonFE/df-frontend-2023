@@ -9,9 +9,12 @@ import {CLOSE_MODAL_DELETE, DELETE} from '../../actions';
 function ModalDeleteBook({nameBook}) {
 	const {state, dispatch} = useContext(DataContext);
 
+	// Closes the delete modal.
 	const handleCloseModal = () => {
 		dispatch({type: CLOSE_MODAL_DELETE});
 	};
+
+	// Handles the book deletion.
 	const handleDeleteBook = () => {
 		dispatch({type: DELETE});
 	};

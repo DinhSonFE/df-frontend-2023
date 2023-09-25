@@ -13,6 +13,8 @@ import './ModalAdd.css';
 function ModalAdd() {
 	const {state, dispatch} = useContext(DataContext);
 	const [checkValue, setCheckValue] = useState(false);
+
+	// Handles getting the form values.
 	const handleGetValueForm = (e) => {
 		dispatch({
 			type: GET_VALUE_ADD,
@@ -22,9 +24,13 @@ function ModalAdd() {
 			},
 		});
 	};
+
+	// Handles closing the modal.
 	const handleCloseModal = () => {
 		dispatch({type: CLOSE_MODAL_ADD});
 	};
+
+	// Handles adding a new book.
 	const handleAddNewBook = (e) => {
 		e.preventDefault();
 		if (state.newBookValue.name !== '' || state.newBookValue.author !== '') {

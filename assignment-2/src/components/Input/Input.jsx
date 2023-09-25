@@ -1,15 +1,6 @@
 import React from 'react';
 import './Input.css';
-function Input({
-	label,
-	icon,
-	width,
-	onChange,
-	value,
-	placeholder,
-	name,
-	required,
-}) {
+function Input({label, icon, width, onChange, value, placeholder, name}) {
 	return (
 		<div className='text-field' style={{width: `${width}`}}>
 			<label htmlFor={name}>{label}</label>

@@ -5,6 +5,8 @@ import {SEARCH} from '../../actions';
 
 function Search(props) {
 	const {state, dispatch} = useContext(DataContext);
+
+	// Handles the change event of the input.
 	const handleGetValue = (e) => {
 		const inputValue = e.target.value;
 		dispatch({type: SEARCH, payload: inputValue});

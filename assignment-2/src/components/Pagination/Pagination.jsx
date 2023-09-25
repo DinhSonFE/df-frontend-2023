@@ -16,13 +16,14 @@ function Pagination({length}) {
 
 	return (
 		<div className='pagination'>
-			{/* Show start page */}
+			{/*Calculate Show start page */}
 			{startPage > 1 && (
 				<button onClick={() => handlePageChange(1)} className='circle'>
 					1
 				</button>
 			)}
 
+			{/*Calculate Show "..." */}
 			{startPage > 2 && (
 				<button
 					onClick={() => handlePageChange(startPage - 1)}
