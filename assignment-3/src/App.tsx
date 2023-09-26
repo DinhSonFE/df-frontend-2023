@@ -3,7 +3,6 @@ import { NavBar, FormSearchAdd, TableBook } from "./components";
 import { reducer } from "./reducers/reducer/reducer";
 import { DataContext } from "./contexts/dataContext";
 import { initialState } from "./reducers/initialSate/initialState";
-import './assets/styles/dark.css'
 import "./App.css";
 
 function App() {
