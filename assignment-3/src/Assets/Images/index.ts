@@ -1,4 +1,4 @@
-import avatar from './user.png'
+import avatar from './avatar.png'
 
 const IMAGE = {
     avatar,

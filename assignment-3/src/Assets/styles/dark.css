@@ -1,0 +1,43 @@
+.dark {
+  background-color: #171b1d !important;
+  color: #fff !important;
+}
+.dark p,
+.dark span,
+.dark {
+  color: white !important;
+}
+.dark #modal-container .modal-background .modal {
+  background-color: #171b1d !important;
+}
+.dark .navbar .nav-left p {
+  color: #ff0057 !important;
+}
+
+.dark .text-field input {
+  color: white;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #ff0057;
+}
+.dark .text-field input::placeholder {
+  color: white;
+}
+.dark #modal-container .modal-background .modal {
+  background-color: #171b1d !important;
+}
+.dark .warning {
+  font-weight: 900 !important;
+  color: red !important;
+  border: 1px solid #fff;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.dark #modal-container .modal-background .modal .close-modal {
+  color: white;
+}
+.dark .delete-name {
+  color: #ff0057 !important;
+}
+.dark .wrapper button {
+  color: white;
+}
