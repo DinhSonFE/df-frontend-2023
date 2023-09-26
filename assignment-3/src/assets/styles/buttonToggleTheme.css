@@ -1,0 +1,325 @@
+.button-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.theme-checkbox {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.toggle {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: calc(200px / 3);
+  height: calc(100px / 3);
+  background: #211042;
+  border-radius: 50px;
+  transition: 500ms;
+  box-shadow: 0 0 8px #ff0057;
+  overflow: hidden;
+}
+
+.toggle-button {
+  position: absolute;
+  display: inline-block;
+  top: calc(7px / 3);
+  left: calc(7px / 3);
+  width: calc(86px / 3);
+  height: calc(86px / 3);
+  border-radius: 50%;
+  background: #faeaf1;
+  overflow: hidden;
+  box-shadow: 0 0 35px 4px rgba(255, 255, 255);
+  transition: all 500ms ease-out;
+}
+
+.crater {
+  position: absolute;
+  display: inline-block;
+  background: #faeaf1;
+  border-radius: 50%;
+  transition: 500ms;
+}
+
+.crater-1 {
+  background: #fffff9;
+  width: calc(86px / 3);
+  height: calc(86px / 3);
+  left: calc(10px / 3);
+  bottom: calc(10px / 3);
+}
+
+.crater-2 {
+  width: calc(20px / 3);
+  height: calc(20px / 3);
+  top: calc(-7px / 3);
+  left: calc(44 / 3);
+}
+
+.crater-3 {
+  width: calc(16px / 3);
+  height: calc(16px / 3);
+  top: calc(20px / 3);
+  right: calc(-4px / 3);
+}
+
+.crater-4 {
+  width: calc(10px / 3);
+  height: calc(10px / 3);
+  top: calc(24px / 3);
+  left: calc(30px / 3);
+}
+
+.crater-5 {
+  width: calc(15px / 3);
+  height: calc(15 / 3);
+  top: calc(40px / 3);
+  left: calc(48px / 3);
+}
+
+.crater-6 {
+  width: calc(10px / 3);
+  height: calc(10px / 3);
+  top: calc(48px / 3);
+  left: calc(20px / 3);
+}
+
+.crater-7 {
+  width: calc(12px / 3);
+  height: calc(12px / 3);
+  bottom: calc(5px / 3);
+  left: calc(35px / 3);
+}
+
+.star {
+  position: absolute;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 1px 0 2px 2px rgba(255, 255, 255);
+}
+
+.star-1 {
+  width: calc(6px / 3);
+  height: calc(6px / 3);
+  right: calc(90px / 3);
+  bottom: calc(40px / 3);
+}
+
+.star-2 {
+  width: calc(8px / 3);
+  height: calc(8px / 3);
+  right: calc(70px / 3);
+  top: calc(10px / 3);
+}
+
+.star-3 {
+  width: calc(5px / 3);
+  height: calc(5px / 3);
+  right: calc(60px / 3);
+  bottom: calc(15px / 3);
+}
+
+.star-4 {
+  width: calc(3px / 3);
+  height: calc(3px / 3);
+  right: calc(40px / 3);
+  bottom: calc(50px / 3);
+}
+
+.star-5 {
+  width: calc(4px / 3);
+  height: calc(4px / 3);
+  right: calc(10px / 3);
+  bottom: calc(35px / 3);
+}
+
+.star-6,
+.star-7,
+.star-8 {
+  width: 10px;
+  height: 1px;
+  border-radius: calc(2px / 3);
+  transform: rotate(-45deg);
+  box-shadow: 5px 0px 4px 1px #fff;
+  animation-name: travel;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+.star-6 {
+  right: calc(30px / 3);
+  bottom: calc(30px / 3);
+  animation-delay: -2s;
+}
+
+.star-7 {
+  right: calc(50px / 3);
+  bottom: calc(60px / 3);
+}
+
+.star-8 {
+  right: calc(90px / 3);
+  top: calc(10px / 3);
+  animation-delay: -4s;
+}
+
+@keyframes travel {
+  0% {
+    transform: rotate(-45deg) translateX(30px);
+  }
+
+  50% {
+    transform: rotate(-45deg) translateX(-5px);
+    box-shadow: 5px 0px 6px 1px #fff;
+  }
+
+  100% {
+    transform: rotate(-45deg) translateX(1px);
+    width: calc(2px / 3);
+    height: calc(2px / 3);
+    opacity: 0;
+    box-shadow: none;
+  }
+}
+
+.active .toggle {
+  background: #24d7f7;
+}
+
+.active .toggle .toggle-button {
+  background: #f7ffff;
+  transform: translateX(calc(102px / 3));
+  box-shadow: 0 0 35px 5px rgba(255, 255, 255);
+}
+
+.active .toggle .toggle-button .crater {
+  transform: rotate(-45deg) translateX(calc(70px / 3));
+}
+
+.active .toggle .star {
+  animation: move 2s infinite;
+  transform: none;
+  box-shadow: none;
+}
+
+.active .toggle .star-1 {
+  width: calc(40px / 3);
+  height: calc(10px / 3);
+  border-radius: 10px;
+  background: #fff;
+  left: calc(20px / 3);
+  top: calc(25px / 3);
+  box-shadow: none;
+}
+
+.active .toggle .star-2 {
+  width: calc(12px / 3);
+  height: calc(12px / 3);
+  background: #fff;
+  left: calc(26px / 3);
+  top: calc(23px / 3);
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.active .toggle .star-3 {
+  width: calc(16px / 3);
+  height: calc(16px / 3);
+  background: #fff;
+  left: calc(35px / 3);
+  top: calc(19px / 3);
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.active .toggle .star-4 {
+  width: calc(14px / 3);
+  height: calc(14px / 3);
+  background: #fff;
+  left: calc(46px / 3);
+  top: calc(21px / 3);
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.active .toggle .star-5 {
+  width: calc(60px / 3);
+  height: calc(15px / 3);
+  border-radius: calc(15px / 3);
+  background: #fff;
+  left: calc(30px / 3);
+  bottom: calc(20px / 3);
+  box-shadow: none;
+}
+
+.active .toggle .star-6 {
+  width: calc(18px / 3);
+  height: calc(18px / 3);
+  background: #fff;
+  border-radius: 50%;
+  left: calc(38px / 3);
+  bottom: calc(20px / 3);
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.active .toggle .star-7 {
+  width: calc(24px / 3);
+  height: calc(24px / 3);
+  background: #fff;
+  border-radius: 50%;
+  left: calc(52px / 3);
+  bottom: calc(20px / 3);
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.active + .toggle .star-8 {
+  width: calc(21px / 3);
+  height: calc(21px / 3);
+  background: #fff;
+  border-radius: 50%;
+  left: calc(70px / 3);
+  top: calc(59px / 3);
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+@keyframes move {
+  0% {
+    transform: none;
+  }
+
+  25% {
+    transform: translateX(calc(2px / 3));
+  }
+
+  100% {
+    transform: translateX(calc(-2px / 3));
+  }
+}
+
+p {
+  text-align: center;
+  letter-spacing: 15px;
+  background: #34495e;
+  color: #fff;
+}
+
+p.morning {
+  background: #e67e22;
+}
+@media screen and (max-width: 639.98px) {
+  .toggle {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: calc(200px / 3);
+    height: calc(100px / 3);
+    background: #211042;
+    border-radius: 50px;
+    transition: 500ms;
+    box-shadow:
+      0 0 4px #fff,
+      0 0 8px #fff;
+    overflow: hidden;
+  }
+}
