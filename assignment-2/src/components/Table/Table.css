@@ -7,7 +7,7 @@ td {
 }
 .wrapper-table {
 	position: relative;
-	height: 30vh;
+	height: 40vh;
 }
 .table {
 	overscroll-behavior-x: contain;

@@ -199,7 +199,7 @@ export const initialState = {
 	modalAddIsOpen: false,
 	modalDeleteIsOpen: false,
 	bookId: undefined,
-	bookList: getBookList(),
+	bookList: JSON.parse(localStorage.getItem('booklist')) || bookList,
 	searchResults: [],
 	newBookValue: {
 		name: '',
