@@ -11,7 +11,9 @@ import {
 	SET_CURRENT_PAGE,
 	SHOW_MODAL_ADD,
 	SHOW_MODAL_DELETE,
+	GET_SEARCH_QUERY
 } from '../actions/index.js';
+
 const reducer = (state, action) => {
 	switch (action.type) {
 		case CHANGE_THEME:
@@ -20,13 +22,18 @@ const reducer = (state, action) => {
 				...state,
 				theme: !state.theme,
 			};
-		case SEARCH:
-			const filter = state.bookList.filter((book) =>
-				book.name.toLowerCase().includes(state.searchQuery.toLowerCase()),
-			);
+		case GET_SEARCH_QUERY:
+			const event = action.payload;
+			const newValue = event.target.value;
 			return {
 				...state,
-				searchQuery: action.payload,
+				searchQuery: newValue
+			}
+		case SEARCH:
+			const filter = state.bookList.filter((book) =>
+				book.name.toLowerCase().includes(state.searchQuery.toLowerCase()))
+			return {
+				...state,
 				currentPage: 1,
 				searchResults: filter,
 			};
@@ -68,12 +75,6 @@ const reducer = (state, action) => {
 				newBook,
 				...JSON.parse(localStorage.getItem('booklist') || '[]'),
 			];
-			const debouncedAdd = () => {
-				setTimeout(() => {
-					localStorage.setItem('booklist', JSON.stringify(newListBook));
-				}, 1);
-			};
-			debouncedAdd();
 			return {
 				...state,
 				modalAddIsOpen: false,

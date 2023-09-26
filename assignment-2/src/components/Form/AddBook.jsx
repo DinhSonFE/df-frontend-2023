@@ -6,10 +6,12 @@ import ModalAdd from '../Modal/ModalAdd';
 
 function AddBook(props) {
 	const {dispatch} = useContext(DataContext);
+
 	// Handles the click event of the button and shows the modal to add a book.
 	const handleShowModal = () => {
 		dispatch({type: SHOW_MODAL_ADD, payload: true});
 	};
+	
 	return (
 		<div>
 			{/* Button to trigger the modal */}

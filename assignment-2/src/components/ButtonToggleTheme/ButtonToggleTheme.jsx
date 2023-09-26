@@ -4,9 +4,11 @@ import {DataContext} from '../../App';
 import {CHANGE_THEME} from '../../actions/index';
 function ButtonToggleTheme() {
 	const {state, dispatch} = useContext(DataContext);
+
 	useEffect(() => {
 		// Check if a theme is stored in local storage
 		const localTheme = localStorage.getItem('theme');
+
 		if (localTheme) {
 			// Remove existing theme classes
 			document.documentElement.classList.remove(
@@ -21,9 +23,12 @@ function ButtonToggleTheme() {
 			document.documentElement.classList.add(state.theme ? 'light' : 'dark');
 		}
 	}, [state.theme]);
+
+	// Handle change theme
 	const handleChangeTheme = () => {
 		dispatch({type: CHANGE_THEME});
 	};
+
 	return (
 		<div className='button-toggle'>
 			<input

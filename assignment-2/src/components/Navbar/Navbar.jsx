@@ -1,7 +1,7 @@
 import logo from '../../Assets/Images/avatar.png';
 import ButtonToggleTheme from '../ButtonToggleTheme/ButtonToggleTheme';
 import './Navbar.css';
-function NavBar(props) {
+function NavBar() {
 	return (
 		<div className='navbar'>
 			<div className='wrapper'>
@@ -11,7 +11,7 @@ function NavBar(props) {
 					</p>
 				</div>
 				<div className='nav-right'>
-					<ButtonToggleTheme></ButtonToggleTheme>
+					<ButtonToggleTheme/>
 					<div className='user'>
 						<img src={logo} alt='avatar' />
 						<p>SownTe</p>
@@ -21,7 +21,5 @@ function NavBar(props) {
 		</div>
 	);
 }
-
-NavBar.propTypes = {};
 
 export default NavBar;
