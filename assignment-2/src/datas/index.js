@@ -199,7 +199,7 @@ export const initialState = {
 	modalAddIsOpen: false,
 	modalDeleteIsOpen: false,
 	bookId: undefined,
-	bookList: JSON.parse(localStorage.getItem('booklist')) || bookList,
+	bookList: getBookList(),
 	searchResults: [],
 	newBookValue: {
 		name: '',
@@ -216,6 +216,6 @@ function getBookList() {
 		return [];
 	}
 }
-function getTheme ( ) {
-	return localStorage.getItem('theme') === 'light' 
+function getTheme() {
+	return localStorage.getItem('theme') === 'light'
 }
